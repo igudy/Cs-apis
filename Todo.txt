@@ -1,0 +1,53 @@
+List of APIs for Your E-Commerce System
+Here’s a breakdown of the necessary APIs for a standard e-commerce backend:
+
+Authentication & User Management
+User Registration (POST /api/auth/register) – Allows users to create an account.
+User Login (POST /api/auth/login) – Issues a JWT token upon successful login.
+Refresh Token (POST /api/auth/refresh) – Refreshes expired JWT tokens.
+Logout (POST /api/auth/logout) – Invalidates the user’s session.
+Get User Profile (GET /api/auth/me) – Fetches the current user's profile.
+
+Update User Profile (PUT /api/auth/me) – Allows a user to update their details.
+Change Password (POST /api/auth/change-password) – Enables users to update their passwords.
+
+
+Product Management
+List All Products (GET /api/products) – Fetches all products.
+Get Product by ID (GET /api/products/{id}) – Fetches a specific product.
+Create Product (POST /api/products) – Admin adds a new product.
+Update Product (PUT /api/products/{id}) – Admin updates a product.
+Delete Product (DELETE /api/products/{id}) – Admin deletes a product.
+
+
+Category Management
+List All Categories (GET /api/categories)
+Get Category by ID (GET /api/categories/{id})
+Create Category (POST /api/categories) – Admin only.
+Update Category (PUT /api/categories/{id})
+Delete Category (DELETE /api/categories/{id})
+
+
+Cart Management
+Add Product to Cart (POST /api/cart)
+Get User Cart (GET /api/cart)
+Remove Product from Cart (DELETE /api/cart/{productId})
+Clear Cart (DELETE /api/cart/clear)
+
+
+Order Management
+Create Order (POST /api/orders)
+Get User Orders (GET /api/orders)
+Get Order Details (GET /api/orders/{id})
+Update Order Status (PUT /api/orders/{id}/status) – Admin only.
+
+
+Payment Processing
+Initialize Payment (POST /api/payments/initiate)
+Verify Payment (GET /api/payments/verify/{transactionId})
+
+
+Admin Dashboard
+Get All Users (GET /api/admin/users) – Admin only.
+Get All Orders (GET /api/admin/orders) – Admin only.
+Get Sales Report (GET /api/admin/reports/sales) – Admin only.
